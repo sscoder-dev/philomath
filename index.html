@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="index.css">
+<title>Philomath</title>
+<link rel="icon" href="logo.png">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="read.html">Read on!</a>
+  <a href="submissions.html">Submissions</a>
+  <a href="team.html">Team</a>
+  <a href="aboutus.html">About us</a>
+</div>
+
+
+
+<div id="main">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+  <h1>Philomath</h1>
+  <p>The Place for people who love to Read!</p>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "150px";
+  document.getElementById("main").style.marginLeft = "150px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "white";
+}
+</script>
+
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setCookieDomain", "*.philomathreadz.netlify.app"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://philomathreadznetlifyapp.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.src='//cdn.matomo.cloud/philomathreadznetlifyapp.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
+<div class="middle">
+  <a class="btn" href="https://twitter.com/Philomathweb">
+    <i class="fab fa-twitter"></i>
+  </a>
+  <a class="btn" href="https://t.me/philomathzteam">
+    <i class="fab fa-telegram"></i>
+  </a>
+  <a class="btn" href="https://www.instagram.com/philomathweb/">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a class="btn" href="https://www.youtube.com/channel/UC90WzHNXM7ogRq5WHK06tbA?view_as=subscriber">
+    <i class="fab fa-youtube"></i>
+  </a>
+</div>  
+
+
+   
+</body>
+</html> 
