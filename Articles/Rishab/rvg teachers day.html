@@ -1,86 +1,77 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Read on!</title>
-    <link rel="icon" href="logo.png">
-    <link rel="stylesheet" type="text/css" href="../../article.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
+    <link rel="icon" href="logo.png" />
+    <link rel="stylesheet" type="text/css" href="../../article.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
     <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="../../index.html">Home</a>
-        <a href="../../read.html">Read on!</a>
-        <a href="../../submissions.html">Submissions</a>
-        <a href="../../team.html">Team</a>
-        <a href="../../aboutus.html">About us</a>
-      </div>
-      
-      <div id="main">
-        <h1>Teachers day around the world</h1>
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
-        
-      </div>
-      
-      <script>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="../../index.html">Home</a>
+      <a href="../../read.html">Read on!</a>
+      <a href="../../submissions.html">Submissions</a>
+      <a href="../../team.html">Team</a>
+      <a href="../../aboutus.html">About us</a>
+    </div>
+
+    <div id="main">
+      <h1>Teachers day around the world</h1>
+      <span style="font-size: 30px; cursor: pointer" onclick="openNav()"
+        >&#9776; Menu</span
+      >
+    </div>
+
+    <script>
       function openNav() {
         document.getElementById("mySidenav").style.width = "150px";
         document.getElementById("main").style.marginLeft = "150px";
         document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
       }
-      
+
       function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
-        document.getElementById("main").style.marginLeft= "0";
+        document.getElementById("main").style.marginLeft = "0";
         document.body.style.backgroundColor = "white";
       }
-      </script>
+    </script>
     <div class="subtitle">
-        <h4>
-            Teachers day in India is celebrated on 5th
-            September every
-           year.It is common knowledge that the birthday of former
-           president Dr Sarvepalli Radhakrishnan is celebrated as
-           teachers day in India. What most people don’t know are his
-           contributions and accomplishments. He was the first vice
-           president of India and the second president of India. He was
-           also awarded the Bharat Ratna in 1952 and the peace prize of
-           the German book trade in 1961. He was also the ambassador
-           of India to the soviet union and represented India at Unesco.
-           He said that “Instead of celebrating my birthday, it would be
-           my proud privilege if September 5th
-            is observed as teachers
-           day.”<br><br> Teachers day has been celebrated in India on this day
-           since 1962. Let us now see how other countries honor their
-           teachers.<br><br> Tuesday 4th
-            May is celebrated as teachers day in the
-           united states. The first full week of may is celebrated as
-           teacher appreciation week. While teaches day is celebrated
-           on 28th
-            march in the Czech republic to commemorate the
-           birthday of John Amos Comenius. In Argentina it is
-           celebrated on 11th
-            September in memory of Domingo F
-           Sarmiento a former president of argentina and educational
-           reformer. <br><br>The most common national teachers day is 5th
-           October as the same day is world teachers day. It was first
-           celebrated in 1994 to commemorate the adoption of the
-           1996 ILO/UNESCO recommendation concerning the status of
-           teachers. Let us remember that each country celebrates the
-           contribution of teachers. <br><br>On this teachers day let us not
-           forget to remember and appreciate the people who made us
-           who we are today.
-           <br><br>
-            Rishab.V.G
-            <br>
-            Writer and Content editor
-            <br>
-            Philomath Team
-
-
-
-        </h4>
+      <h4>
+        Teachers day in India is celebrated on 5th September every year.It is
+        common knowledge that the birthday of former president Dr Sarvepalli
+        Radhakrishnan is celebrated as teachers day in India. What most people
+        don’t know are his contributions and accomplishments. He was the first
+        vice president of India and the second president of India. He was also
+        awarded the Bharat Ratna in 1952 and the peace prize of the German book
+        trade in 1961. He was also the ambassador of India to the soviet union
+        and represented India at Unesco. He said that “Instead of celebrating my
+        birthday, it would be my proud privilege if September 5th is observed as
+        teachers day.”<br /><br />
+        Teachers day has been celebrated in India on this day since 1962. Let us
+        now see how other countries honor their teachers.<br /><br />
+        Tuesday 4th May is celebrated as teachers day in the united states. The
+        first full week of may is celebrated as teacher appreciation week. While
+        teaches day is celebrated on 28th march in the Czech republic to
+        commemorate the birthday of John Amos Comenius. In Argentina it is
+        celebrated on 11th September in memory of Domingo F Sarmiento a former
+        president of argentina and educational reformer. <br /><br />The most
+        common national teachers day is 5th October as the same day is world
+        teachers day. It was first celebrated in 1994 to commemorate the
+        adoption of the 1996 ILO/UNESCO recommendation concerning the status of
+        teachers. Let us remember that each country celebrates the contribution
+        of teachers. <br /><br />On this teachers day let us not forget to
+        remember and appreciate the people who made us who we are today.
+        <br /><br />
+        Rishab.V.G
+        <br />
+        Writer and Content editor
+        <br />
+        Philomath Team
+      </h4>
     </div>
 
     <div id="allcomments">
@@ -89,86 +80,140 @@
       <ul id="pastcomments"></ul>
       <!-- This is the form for entering a new comment -->
       <form id="newcomment">
-          <label for="tbName">First Name or Initials</label>
-          <br>
-          <input id="tbName" type="text" maxlength="20" required>
-          <br>
-          <label for="txComment">Your Comment / Question</label>
-          <br>
-          <textarea id="txComment" maxlength="4096" required style="width:96%"></textarea>
-          <br>
-          <input type="submit" id="btnSubmitComment" value="Submit Comment">
+        <label for="tbName">First Name or Initials</label>
+        <br />
+        <input id="tbName" type="text" maxlength="20" required />
+        <br />
+        <label for="txComment">Your Comment / Question</label>
+        <br />
+        <textarea
+          id="txComment"
+          maxlength="4096"
+          required
+          style="width: 96%"
+        ></textarea>
+        <br />
+        <input type="submit" id="btnSubmitComment" value="Submit Comment" />
       </form>
-  </div>
-  
-  <!-- Connection to Firebase -->
-      <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-app.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-database.js"></script>
-      <script>
-          // Initialize Firebase - be sure to use your own code, this connects to my database.
-          // Initialize Firebase
-          var config = {
-              apiKey: "AIzaSyBVQQVVmeMr49HAKhaZj1950XhcTpCF_AM",
-      authDomain: "philomathcomments.firebaseapp.com",
-      databaseURL: "https://philomathcomments.firebaseio.com",
-      projectId: "philomathcomments",
-      storageBucket: "philomathcomments.appspot.com",
-      messagingSenderId: "629266890125",
-          };
-          firebase.initializeApp(config);
-          //Rootref is the whole database.
-          const rootRef = firebase.database().ref();
-          //commentsRef is just the pageCountsNode
-          const commentsRef = rootRef.child('comments');
-          //Listen for click on Submit Comment button, and post comment.
-          document.getElementById("btnSubmitComment").addEventListener("click", function () {
-              //Replace line breaks in comment with br tags.
-              var newcomment = document.getElementById('txComment').value.replace(/\n/g, "<br>");
-              //Define a new, keyed post.
-              var newPostRef = commentsRef.push();
-              //Fill tne new keyed post with data
-              newPostRef.set({
-                  name: document.getElementById('tbName').value.trim(),
-                  comment: newcomment.trim(),
-                  frompage: location.pathname,
-                  when: firebase.database.ServerValue.TIMESTAMP
-              });
+    </div>
+
+    <!-- Connection to Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-database.js"></script>
+    <script>
+      // Initialize Firebase - be sure to use your own code, this connects to my database.
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBVQQVVmeMr49HAKhaZj1950XhcTpCF_AM",
+        authDomain: "philomathcomments.firebaseapp.com",
+        databaseURL: "https://philomathcomments.firebaseio.com",
+        projectId: "philomathcomments",
+        storageBucket: "philomathcomments.appspot.com",
+        messagingSenderId: "629266890125",
+      };
+      firebase.initializeApp(config);
+      //Rootref is the whole database.
+      const rootRef = firebase.database().ref();
+      //commentsRef is just the pageCountsNode
+      const commentsRef = rootRef.child("comments");
+      //Listen for click on Submit Comment button, and post comment.
+      document
+        .getElementById("btnSubmitComment")
+        .addEventListener("click", function () {
+          //Replace line breaks in comment with br tags.
+          var newcomment = document
+            .getElementById("txComment")
+            .value.replace(/\n/g, "<br>");
+          //Define a new, keyed post.
+          var newPostRef = commentsRef.push();
+          //Fill tne new keyed post with data
+          newPostRef.set({
+            name: document.getElementById("tbName").value.trim(),
+            comment: newcomment.trim(),
+            frompage: location.pathname,
+            when: firebase.database.ServerValue.TIMESTAMP,
           });
-  
-          function showpastcomments() {
-              var showat = document.getElementById('pastcomments');
-              //Get comments whose from page equals this page's pathname.
-              var commentsRef = firebase.database().ref('comments/').orderByChild('frompage').equalTo(location.pathname);
-              commentsRef.once('value', function (snapshot) {
-                  snapshot.forEach(function (itemSnapshot) {
-                      //Get the object for one snapshot
-                      var itemData = itemSnapshot.val();
-                      var comment = itemData.comment;
-                      var name = itemData.name;
-                      var when = new Date(itemData.when).toLocaleDateString("en-us");
-                      showat.innerHTML += "<li>" + comment + "<span> -- " + name + " (" + when +
-                          ")</span></li>";
-                  })
-              })
-          }
-          //Called when page first opens and also after Submit button click to show all comments for this page.
-          showpastcomments()
-      </script>
+        });
+
+      function showpastcomments() {
+        var showat = document.getElementById("pastcomments");
+        //Get comments whose from page equals this page's pathname.
+        var commentsRef = firebase
+          .database()
+          .ref("comments/")
+          .orderByChild("frompage")
+          .equalTo(location.pathname);
+        commentsRef.once("value", function (snapshot) {
+          snapshot.forEach(function (itemSnapshot) {
+            //Get the object for one snapshot
+            var itemData = itemSnapshot.val();
+            var comment = itemData.comment;
+            var name = itemData.name;
+            var when = new Date(itemData.when).toLocaleDateString("en-us");
+            showat.innerHTML +=
+              "<li>" +
+              comment +
+              "<span> -- " +
+              name +
+              " (" +
+              when +
+              ")</span></li>";
+          });
+        });
+      }
+      //Called when page first opens and also after Submit button click to show all comments for this page.
+      showpastcomments();
+    </script>
     <!-- Matomo -->
-<script type="text/javascript">
-  var _paq = window._paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push(["setCookieDomain", "*.philomathreadz.netlify.app"]);
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="https://philomathreadznetlifyapp.matomo.cloud/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '1']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.src='//cdn.matomo.cloud/philomathreadznetlifyapp.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<!-- End Matomo Code -->
-</body>
+    <script type="text/javascript">
+      var _paq = (window._paq = window._paq || []);
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(["setCookieDomain", "*.philomathreadz.netlify.app"]);
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+      (function () {
+        var u = "https://philomathreadznetlifyapp.matomo.cloud/";
+        _paq.push(["setTrackerUrl", u + "matomo.php"]);
+        _paq.push(["setSiteId", "1"]);
+        var d = document,
+          g = d.createElement("script"),
+          s = d.getElementsByTagName("script")[0];
+        g.type = "text/javascript";
+        g.async = true;
+        g.src =
+          "//cdn.matomo.cloud/philomathreadznetlifyapp.matomo.cloud/matomo.js";
+        s.parentNode.insertBefore(g, s);
+      })();
+    </script>
+    <!-- End Matomo Code -->
+
+    <!-- google code firebase -->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyBmjnD4oAzIuKK8tNJNHlr5JavhBFIO_vI",
+        authDomain: "philomath-c635d.firebaseapp.com",
+        databaseURL: "https://philomath-c635d.firebaseio.com",
+        projectId: "philomath-c635d",
+        storageBucket: "philomath-c635d.appspot.com",
+        messagingSenderId: "700006397957",
+        appId: "1:700006397957:web:cd0cdc551053ce66cfc46c",
+        measurementId: "G-PD1PGYTG69",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+
+    <!-- End google Code firebase-->
+  </body>
 </html>

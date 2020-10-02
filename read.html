@@ -9,6 +9,8 @@
 </head>
 <body>
 
+ 
+
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="index.html">Home</a>
@@ -25,6 +27,8 @@
   <h1>Read On!</h1>
   <p>A list of articles for you to read. Happy reading!</p>
 </div>
+
+<marquee>Philomath: Thanks for your support</marquee>
 
 <script>
 function openNav() {
@@ -96,6 +100,34 @@ function closeNav() {
 </script>
 <!-- End Matomo Code -->
 
+<!-- google code firebase -->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyBmjnD4oAzIuKK8tNJNHlr5JavhBFIO_vI",
+        authDomain: "philomath-c635d.firebaseapp.com",
+        databaseURL: "https://philomath-c635d.firebaseio.com",
+        projectId: "philomath-c635d",
+        storageBucket: "philomath-c635d.appspot.com",
+        messagingSenderId: "700006397957",
+        appId: "1:700006397957:web:cd0cdc551053ce66cfc46c",
+        measurementId: "G-PD1PGYTG69",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+
+    <!-- End google Code firebase-->
    
 </body>
 </html> 
