@@ -114,7 +114,7 @@ body {
     background-size: auto;
     background-position: center;
       }
-
+{
      /* Just come optional fonts and characters for styling */
      @import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans|Pacifico|Source+Code+Pro');
      /* FontAwesome cdn fonts */
