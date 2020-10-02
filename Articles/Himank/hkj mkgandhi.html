@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Read on!</title>
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" type="text/css" href="../../article.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="../../index.html">Home</a>
+        <a href="../../read.html">Read on!</a>
+        <a href="../../submissions.html">Submissions</a>
+        <a href="../../team.html">Team</a>
+        <a href="../../aboutus.html">About us</a>
+      </div>
+      
+      <div id="main">
+        <h1>M.K.Gandhi</h1>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+        
+      </div>
+      
+      <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "150px";
+        document.getElementById("main").style.marginLeft = "150px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+        document.body.style.backgroundColor = "white";
+      }
+      </script>
+    <div class="subtitle">
+        <h4>
+            On 2nd of October in the year of 1869, a legend,not only
+            for 1 country but 7 and an inspirational personality for
+            the entire world, was born to Karamchand Gandhi and
+            Putlibai Gandhi in the one of the most western cities of
+            India, porbandar. he has earned many names like
+            mahatma gandhi, Gandhiji, etc . He is a lawyer by
+            profession and went to south Africa to practice law,at
+            that time south Africa was suffering from the apartheid
+            system and gandhi having the Indian skin tone also
+            became a victim to it.<br><br>
+            He then started to protest against this system and lead a
+            nonviolent campaign. He later came to the indian
+            subcontinent which at that time was considered India,
+            Pakistan, Bangladesh, Nepal, Bhutan and Sri lanka. It
+            was under british control and gandhiji decided to teach
+            the world how powerful non violence is. From January
+            1915 (when he returned to India from South Africa)
+            Gandhi led a series of non violent protests against the
+            British government.<br><br> 
+            Some of the most popular ones are<br>
+            ● Dandi March
+            <br>
+            ● Non cooperation movement
+            <br>
+            ● Round table conference 2
+            <br>
+            ● Khilafat movement
+            <br><br>
+            He was a member of the Indian national Congress and
+            had highly influenced its decisions to lead a nonviolent
+            campaign. Many other political leaders like BR
+            Ambedkar, Subhash Chandra Bose, Jawaharlal Nehru
+            ,etc have been involved with some of his campaigns.
+            Many of which later played an important role in the
+            formation of democratic India .
+            <br><br>
+            Finally on 15th August of 1947 India became an
+            independent nation after a prolonged struggle of almost
+            200 years. This was a result of the fasts done by
+            Gandhiji and the unity of the entire nation to oppose
+            British rule.
+            <br><br>
+            On 30th of January of 1948 Nathuram Godse fired 3
+            bullets into the chest of Gandhiji and killed him. This day
+            in India is marked as martyrs day and 2 minutes of
+            silence at 11 Am across India is maintained. The final
+            words of gandhiji were,"HEY RAM".
+            <br><br>
+            Himank Jain
+            <br>
+            Writer
+            <br>
+            Philomath team
+
+                    
+                    
+
+                
+        </h4>
+    </div>
+
+    <div id="allcomments">
+      <h3>Comments</h3>
+      <!-- We will show past comments in the list below-->
+      <ul id="pastcomments"></ul>
+      <!-- This is the form for entering a new comment -->
+      <form id="newcomment">
+          <label for="tbName">First Name or Initials</label>
+          <br>
+          <input id="tbName" type="text" maxlength="20" required>
+          <br>
+          <label for="txComment">Your Comment / Question</label>
+          <br>
+          <textarea id="txComment" maxlength="4096" required style="width:96%"></textarea>
+          <br>
+          <input type="submit" id="btnSubmitComment" value="Submit Comment">
+      </form>
+  </div>
+  
+  <!-- Connection to Firebase -->
+      <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-database.js"></script>
+      <script>
+          // Initialize Firebase - be sure to use your own code, this connects to my database.
+          // Initialize Firebase
+          var config = {
+              apiKey: "AIzaSyBVQQVVmeMr49HAKhaZj1950XhcTpCF_AM",
+      authDomain: "philomathcomments.firebaseapp.com",
+      databaseURL: "https://philomathcomments.firebaseio.com",
+      projectId: "philomathcomments",
+      storageBucket: "philomathcomments.appspot.com",
+      messagingSenderId: "629266890125",
+          };
+          firebase.initializeApp(config);
+          //Rootref is the whole database.
+          const rootRef = firebase.database().ref();
+          //commentsRef is just the pageCountsNode
+          const commentsRef = rootRef.child('comments');
+          //Listen for click on Submit Comment button, and post comment.
+          document.getElementById("btnSubmitComment").addEventListener("click", function () {
+              //Replace line breaks in comment with br tags.
+              var newcomment = document.getElementById('txComment').value.replace(/\n/g, "<br>");
+              //Define a new, keyed post.
+              var newPostRef = commentsRef.push();
+              //Fill tne new keyed post with data
+              newPostRef.set({
+                  name: document.getElementById('tbName').value.trim(),
+                  comment: newcomment.trim(),
+                  frompage: location.pathname,
+                  when: firebase.database.ServerValue.TIMESTAMP
+              });
+          });
+  
+          function showpastcomments() {
+              var showat = document.getElementById('pastcomments');
+              //Get comments whose from page equals this page's pathname.
+              var commentsRef = firebase.database().ref('comments/').orderByChild('frompage').equalTo(location.pathname);
+              commentsRef.once('value', function (snapshot) {
+                  snapshot.forEach(function (itemSnapshot) {
+                      //Get the object for one snapshot
+                      var itemData = itemSnapshot.val();
+                      var comment = itemData.comment;
+                      var name = itemData.name;
+                      var when = new Date(itemData.when).toLocaleDateString("en-us");
+                      showat.innerHTML += "<li>" + comment + "<span> -- " + name + " (" + when +
+                          ")</span></li>";
+                  })
+              })
+          }
+          //Called when page first opens and also after Submit button click to show all comments for this page.
+          showpastcomments()
+      </script>
+
+    <!-- Matomo -->
+<script type="text/javascript">
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setCookieDomain", "*.philomathreadz.netlify.app"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://philomathreadznetlifyapp.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.src='//cdn.matomo.cloud/philomathreadznetlifyapp.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+</body>
+</html>
